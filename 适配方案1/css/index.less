@@ -1,0 +1,968 @@
+// 首页的样式less文件
+// @import 导入的意思是可以把一个样式文件导入到另一个样式文件里面
+@import "common";
+
+body {
+    min-width: 320px;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+// 点击高亮我们需要清除清除  设置为transparent 完成透明
+
+* {
+    -webkit-tap-highlight-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+
+// 在移动端浏览器默认的外观在iOS上加上这个属性才能给按钮和输入框自定义样式
+
+input {
+    -webkit-appearance: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+// 禁用长按页面时的弹出菜单
+
+img,
+a {
+    -webkit-touch-callout: none;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img,
+input {
+    vertical-align: middle;
+}
+
+img {
+    max-width: 100%;
+}
+
+input,
+button {
+    border: none;
+    outline: none;
+}
+
+em,
+i {
+    font-style: normal;
+}
+
+@basefont: 50px;
+
+.sn-nav-wrapper {
+    width: 15rem;
+    height: (180rem / @basefont);
+    margin: 0 auto;
+
+    .index-nav {
+        position: relative;
+        width: 15rem;
+        margin: 0 auto;
+        line-height: (88rem / @basefont);
+        font-size: (24rem / @basefont);
+        overflow: hidden;
+
+        .index-nav-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 15rem;
+            height: (180rem / @basefont);
+            overflow: hidden;
+
+            img {
+                position: absolute;
+                bottom: 0;
+                width: 15rem;
+                height: (260rem / @basefont);
+            }
+        }
+
+        .top-type {
+            position: relative;
+            width: 15rem;
+
+            .content-wrap-one {
+                width: (682rem / @basefont);
+                height: (88rem / @basefont);
+                margin: 0 auto;
+                display: -webkit-flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .class {
+                    width: (36rem / @basefont);
+                    height: (60rem / @basefont);
+
+                    a {
+                        line-height: (88rem / @basefont);
+                    }
+
+                    img {
+                        display: block;
+                        width: (36rem / @basefont);
+                        height: (60rem / @basefont);
+                    }
+                }
+
+                .top-wrapper {
+                    display: flex;
+                    width: (570rem / @basefont);
+                    height: (88rem / @basefont);
+                    align-items: center;
+
+                    a {
+                        line-height: (88rem / @basefont);
+                    }
+
+                    a img {
+                        display: block;
+                        width: (390rem / @basefont);
+                        height: (76rem / @basefont);
+                    }
+                }
+
+                .middle-style {
+                    justify-content: center;
+                }
+
+                .login {
+                    width: (36rem / @basefont);
+                    height: (60rem / @basefont);
+
+                    a {
+                        line-height: (88rem / @basefont);
+                    }
+
+                    img {
+                        display: block;
+                        width: (36rem / @basefont);
+                        height: (60rem / @basefont);
+                    }
+                }
+            }
+
+            .content-wrap-two {
+                width: 15rem;
+                height: (92rem / @basefont);
+                padding: 0 (24rem / @basefont);
+
+                .search-bar {
+                    position: relative;
+
+                    .search {
+                        position: absolute;
+                        display: block;
+                        width: 100%;
+                        height: (88rem / @basefont);
+
+                        &::after {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            top: (28rem / @basefont);
+                            left: (20rem / @basefont);
+                            width: (36rem / @basefont);
+                            height: (36rem / @basefont);
+                            background: url(../images/search-icon.png);
+                            background-size: (36rem / @basefont) (36rem / @basefont);
+                        }
+                    }
+
+                    form {
+                        height: (88rem / @basefont);
+
+                        .search-input {
+                            width: 100%;
+                            height: (64rem / @basefont);
+                            line-height: (64rem / @basefont);
+                            background-color: #fff;
+                            font-size: (28rem / @basefont);
+                            color: #999;
+                            border-radius: (30rem / @basefont);
+                            padding: (3rem / @basefont) (20rem / @basefont) 0 (65rem / @basefont);
+
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+        .fixed-type {
+            display: none;
+            display: flex;
+            position: relative;
+            width: 15rem;
+
+            .content-wrap-one {
+                width: (682rem / @basefont);
+                height: (88rem / @basefont);
+                margin: 0 auto;
+                display: flex;
+                display: -webkit-flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .class {
+                    display: block;
+                    width: (36rem / @basefont);
+                    height: 60rem / @basefont;
+
+                    img {
+                        width: (36rem / @basefont);
+                        height: 60rem / @basefont;
+                    }
+                }
+
+                .top-wrapper {
+                    display: flex;
+                    width: (570rem / @basefont);
+                    height: (88rem / @basefont);
+                    justify-content: center;
+                    align-items: center;
+
+                    .search-wrapper {
+                        width: (522rem / @basefont);
+
+                        .search-bar {
+                            -webkit-flex: 1 !important;
+                            -webkit-box-flex: 1;
+                            position: relative;
+                            word-wrap: break-word;
+                            word-break: break-all;
+
+                            .search {
+                                display: block;
+                                position: absolute;
+                                height: (522rem / @basefont);
+                                width: 100%;
+                                z-index: 10;
+                            }
+
+                            .search-icon {
+                                position: absolute;
+                                width: (36rem / @basefont);
+                                height: (36rem / @basefont);
+                                top: (28rem / @basefont);
+                                left: (20rem / @basefont);
+                                background: url(../images/search-icon.png);
+                                background-size: (36rem / @basefont) (36rem / @basefont);
+                            }
+
+                            form {
+                                height: (88rem / @basefont);
+
+                                .search-input {
+                                    border: none;
+                                    -webkit-border-radius: 0.6rem;
+                                    padding: 0.06rem 0.4rem 0 1.3rem;
+                                    width: 100%;
+                                    height: 1.28rem;
+                                    line-height: 1.28rem;
+                                    background: #FFF;
+                                    font-size: 0.56rem;
+                                    color: #999999;
+                                    -webkit-appearance: none;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .login {
+                    width: 0.72rem;
+                    height: 1.2rem;
+                    text-align: center;
+
+                    img {
+                        width: (36rem / @basefont);
+                        height: 60rem / @basefont;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.index-wrap {
+    width: 15rem;
+    margin: 0 auto;
+
+    .enter-list {
+        width: 15rem;
+        height: (320rem / @basefont);
+        margin: 0 auto;
+        background: url(../images/enter-list-bg.png);
+        background-size: (750rem / @basefont) (320rem / @basefont);
+
+        .enter-wrapper {
+            .enter-nav {
+                display: flex;
+                flex-wrap: wrap;
+
+                li {
+                    flex: 20%;
+
+                    a {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin-top: (24rem / @basefont);
+
+                        .enter-icon img {
+                            width: (84rem / @basefont);
+                            height: (84rem / @basefont);
+                        }
+
+                        .enter-title {
+                            font-size: (22rem / @basefont);
+                            margin-top: (2rem / @basefont);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .banner {
+        display: flex;
+        width: 15rem;
+        height: (200.63rem / @basefont);
+
+        a {
+            img {
+                width: 15rem;
+                height: (200.63rem / @basefont);
+            }
+        }
+    }
+
+    .two-wrap {
+        width: (702rem / @basefont);
+        height: (912rem / @basefont);
+        margin: 0 auto;
+        overflow: hidden;
+
+        .left-wrap {
+            float: left;
+            width: (342rem / @basefont);
+            height: (912rem / @basefont);
+
+            .cardchannel {
+                position: relative;
+                width: (342rem / @basefont);
+                height: (210rem / @basefont);
+                margin-bottom: (18rem / @basefont);
+                padding: (46rem / @basefont) 0 0 (12rem / @basefont);
+
+                .bg {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .pro {
+                    position: relative;
+                    float: left;
+                    display: block;
+                    width: (154rem / @basefont);
+                    height: (154rem / @basefont);
+                    margin-right: (10rem / @basefont);
+
+                    .cardchannel-img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .sellingpoint {
+                        display: block;
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        height: (28rem / @basefont);
+                        background: #ffebeb;
+                        padding: 0 (14rem / @basefont);
+                        border-radius: (28rem / @basefont);
+                        font-size: (22rem / @basefont);
+                        color: #ff0000;
+                        white-space: nowrap;
+                        line-height: (28rem / @basefont);
+                        -webkit-transform: translate(-50%);
+                    }
+                }
+
+                .promo {
+                    position: relative;
+                    width: (171rem / @basefont);
+                    height: (210rem / @basefont);
+                    float: left;
+                    margin-right: 0;
+
+                    .promo-bg {
+                        display: block;
+                        width: (171rem / @basefont);
+                        height: (210rem / @basefont);
+
+                    }
+
+                    .promo-bg-1 {
+                        background: url(../upload/bg-1.png) no-repeat center center;
+                        background-size: (171rem / @basefont) (210rem / @basefont);
+                    }
+
+                    .promo-bg-2 {
+                        background: url(../upload/bg-2.png) no-repeat center center;
+                        background-size: (171rem / @basefont) (210rem / @basefont);
+                    }
+
+                    .cardchannel-img {
+                        position: absolute;
+                        top: (56rem / @basefont);
+                        left: (17.5rem / @basefont);
+                        width: (136rem / @basefont);
+                        height: (136rem / @basefont);
+                    }
+
+                    .sellingpoint {
+                        display: block;
+                        position: absolute;
+                        bottom: (10rem / @basefont);
+                        left: 50%;
+                        height: (28rem / @basefont);
+                        background: #ffebeb;
+                        padding: 0 (14rem / @basefont);
+                        border-radius: (28rem / @basefont);
+                        font-size: (22rem / @basefont);
+                        color: #ff0000;
+                        white-space: nowrap;
+                        line-height: (28rem / @basefont);
+                        -webkit-transform: translate(-50%);
+                    }
+                }
+
+            }
+
+            .cardchannel2 {
+                padding: 0;
+            }
+
+            .cardbanner {
+                position: relative;
+                height: (438rem / @basefont);
+                margin-bottom: (18rem / @basefont);
+
+                .swipe-wrapper {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: (342rem / @basefont);
+                    height: (438rem / @basefont);
+
+                    .swipe {
+                        position: relative;
+                        overflow: hidden;
+                        height: (438rem / @basefont);
+
+                        .swipe-ul {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            margin: 0;
+                            overflow: hidden;
+
+                            li {
+                                position: relative;
+                                float: left;
+                                height: (438rem / @basefont);
+                                border-radius: (15rem / @basefont);
+                                overflow: hidden;
+
+                                a {
+                                    position: relative;
+                                    display: block;
+                                    width: (342rem / @basefont);
+                                    height: (438rem / @basefont);
+
+                                    .b-image {
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 0;
+                                        width: 6.84rem;
+                                        height: auto;
+                                        -webkit-transform: translate(0, -50%);
+                                    }
+                                }
+                            }
+                        }
+
+                        .trigger-wrapper {
+                            position: absolute;
+                            bottom: (12rem / @basefont);
+                            width: 100%;
+                            height: (8rem / @basefont);
+                            text-align: center;
+                            font-size: 0;
+
+                            .trigger {
+                                position: relative;
+                                height: (8rem / @basefont);
+                                right: auto;
+                                display: inline-block;
+                                text-align: center;
+
+                                li {
+                                    width: (18rem / @basefont);
+                                    margin: 0 (4rem / @basefont);
+                                    text-align: center;
+                                    display: inline-block;
+                                    width: (9rem / @basefont);
+                                    height: (8rem / @basefont);
+                                    border-radius: (8rem / @basefont);
+                                    background: rgba(0, 0, 0, 0.3);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .right-wrap {
+            float: right;
+            width: (342rem / @basefont);
+            height: (912rem / @basefont);
+
+            .cardchannel {
+                position: relative;
+                width: (342rem / @basefont);
+                height: (210rem / @basefont);
+                margin-bottom: (18rem / @basefont);
+
+                .promo {
+                    position: relative;
+                    float: left;
+                    width: (171rem / @basefont);
+                    height: (210rem / @basefont);
+                    float: left;
+                    margin-right: 0;
+
+                    .promo-bg {
+                        display: block;
+                        width: (171rem / @basefont);
+                        height: (210rem / @basefont);
+
+                    }
+
+                    .promo-bg-3 {
+                        background: url(../upload/bg-3.png) no-repeat center center;
+                        background-size: (171rem / @basefont) (210rem / @basefont);
+                    }
+
+                    .promo-bg-4 {
+                        background: url(../upload/bg-4.png) no-repeat center center;
+                        background-size: (171rem / @basefont) (210rem / @basefont);
+                    }
+
+                    .promo-bg-5 {
+                        background: url(../upload/bg-5.png) no-repeat center center;
+                        background-size: (171rem / @basefont) (210rem / @basefont);
+                    }
+
+                    .promo-bg-6 {
+                        background: url(../upload/bg-6.png) no-repeat center center;
+                        background-size: (171rem / @basefont) (210rem / @basefont);
+                    }
+
+                    .cardchannel-img {
+                        position: absolute;
+                        top: (56rem / @basefont);
+                        left: (17.5rem / @basefont);
+                        width: (136rem / @basefont);
+                        height: (136rem / @basefont);
+                    }
+
+                    .sellingpoint {
+                        display: block;
+                        position: absolute;
+                        bottom: (10rem / @basefont);
+                        left: 50%;
+                        height: (28rem / @basefont);
+                        background: #ffebeb;
+                        padding: 0 (14rem / @basefont);
+                        border-radius: (28rem / @basefont);
+                        font-size: (22rem / @basefont);
+                        color: #ff0000;
+                        white-space: nowrap;
+                        line-height: (28rem / @basefont);
+                        -webkit-transform: translate(-50%);
+                    }
+                }
+            }
+
+            .cardlabelname {
+                position: relative;
+                width: (342rem / @basefont);
+                height: (210rem / @basefont);
+                margin-bottom: (18rem / @basefont);
+                padding: (48rem / @basefont) 0 0 (10rem / @basefont);
+
+                .bg {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .promo {
+                    float: left;
+                    display: block;
+                    position: relative;
+                    width: (156rem / @basefont);
+                    height: (150rem / @basefont);
+                    margin-right: (6rem / @basefont);
+
+                    .title {
+                        position: absolute;
+                        top: (-48rem / @basefont);
+                        left: 0;
+                        display: block;
+                        width: (156rem / @basefont);
+                        line-height: (48rem / @basefont);
+                        text-align: center;
+                        font-size: (26rem / @basefont);
+                        font-weight: 700;
+                        color: #fff;
+                    }
+
+                    .cardlable-img {
+                        width: (120rem / @basefont);
+                        height: (120rem / @basefont);
+                        margin: (15rem / @basefont) (18rem / @basefont) 0;
+                    }
+
+                    .sellingpoint {
+                        display: block;
+                        position: absolute;
+                        bottom: (6rem / @basefont);
+                        left: 50%;
+                        height: (28rem / @basefont);
+                        padding: 0 (14rem / @basefont);
+                        font-size: (24rem / @basefont);
+                        color: #fff;
+                        background: url(../upload/sellingpoint-bg-1.png) no-repeat center center;
+                        background-size: (136rem / @basefont) (32rem / @basefont);
+                        white-space: nowrap;
+                        line-height: (28rem / @basefont);
+                        -webkit-transform: translate(-50%);
+                    }
+
+                    .sellingpoint-bg {
+                        background: url(../upload/sellingpoint-bg-2.png) no-repeat center center;
+                        background-size: (136rem / @basefont) (32rem / @basefont);
+
+                    }
+                }
+            }
+        }
+
+    }
+
+    .qdhb {
+        position: fixed;
+        right: 10px;
+        bottom: 650px;
+        width: (100rem / @basefont);
+        height: (100rem / @basefont);
+    }
+
+    .guesslike {
+        width: 15rem;
+        margin: 0 auto;
+
+        .title {
+            display: block;
+            width: (702rem / @basefont);
+            height: (60rem / @basefont);
+            margin: 0 auto;
+
+            img {
+                display: block;
+                width: (702rem / @basefont);
+                height: (60rem / @basefont);
+            }
+        }
+
+        .pro-list-wrapper {
+            width: 15rem;
+            background: #f7f7f7;
+
+            .pro-list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                width: (702rem / @basefont);
+                margin: 0 auto;
+
+                .left-list {
+                    width: (342rem / @basefont);
+                }
+
+                .right-list {
+                    width: (342rem / @basefont);
+                }
+
+                .left-list,
+                .right-list {
+                    .goods {
+                        height: (542rem / @basefont);
+                        width: (342rem / @basefont);
+                        padding-bottom: (14rem / @basefont);
+                        margin-bottom: (18rem / @basefont);
+                        border-radius: (12rem / @basefont);
+                        background-color: #fff;
+
+                        .links {
+                            .list-image {
+                                width: (342rem / @basefont);
+                                height: (342rem / @basefont);
+
+                                .pro-img {
+                                    width: (342rem / @basefont);
+                                    height: (342rem / @basefont);
+                                    border-radius: (12rem / @basefont) (12rem / @basefont) 0 0;
+                                    background: url(../images/pro-list-bg.png) no-repeat;
+                                }
+                            }
+
+                            .pro-title {
+                                width: (318rem / @basefont);
+                                height: (67rem / @basefont);
+                                margin: (18rem / @basefont) auto 0;
+                                font-size: (26rem / @basefont);
+                                line-height: (34rem / @basefont);
+                                font-weight: 700;
+                                text-overflow: ellipsis;
+                                white-space: normal;
+                                overflow: hidden;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                            }
+
+                            .promo-tag {
+                                display: flex;
+                                flex-wrap: wrap;
+                                width: (269rem / @basefont);
+                                height: (24rem / @basefont);
+                                margin: (11rem / @basefont) (12rem / @basefont) (24rem / @basefont);
+                                overflow: hidden;
+
+                                .promo-icon {
+                                    display: block;
+                                    width: (48rem / @basefont);
+                                    height: (24rem / @basefont);
+                                    margin: 0 (6rem / @basefont) (2rem / @basefont) 0;
+                                }
+
+                                .promo-text {
+                                    height: (24rem / @basefont);
+                                    margin: 0 (3rem / @basefont) (2rem / @basefont) (2rem / @basefont);
+                                    padding: (2rem / @basefont) (12rem / @basefont);
+                                    line-height: (20rem / @basefont);
+                                    font-size: (18rem / @basefont);
+                                    border: 1px solid #ffbb00;
+                                    box-sizing: border-box;
+                                    border-radius: (6rem / @basefont);
+                                    background: #fefbee;
+                                }
+                            }
+
+                            .pro-price {
+                                height: (38rem / @basefont);
+                                line-height: (38rem / @basefont);
+                                margin-left: (12rem / @basefont);
+
+                                .real-price {
+                                    display: flex;
+                                    height: (38rem / @basefont);
+                                    font-size: (24rem / @basefont);
+                                    color: #ff4422;
+                                    font-weight: 700;
+                                    align-items: flex-end;
+
+                                    .flag {
+                                        line-height: (28rem / @basefont);
+                                    }
+
+                                    .pre-price {
+                                        font-size: (36rem / @basefont);
+                                        line-height: (36rem / @basefont);
+                                    }
+
+                                    .last-price {
+                                        line-height: (28rem / @basefont);
+                                    }
+
+                                    .price-comments {
+                                        margin-left: (13rem / @basefont);
+                                        color: #999;
+                                        font-weight: 400;
+                                        font-size: (20rem / @basefont);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .guesslikeload {
+                width: 100%;
+                height: (1rem / @basefont);
+            }
+        }
+
+        .sn-logo {
+            float: left;
+            width: 15rem;
+            height: (173rem / @basefont);
+            margin-bottom: (100rem / @basefont);
+
+            .sn-logo-img {
+                display: block;
+                width: 15rem;
+                height: (173rem / @basefont);
+                margin: 0 auto;
+                background: #f7f7f7;
+            }
+        }
+
+    }
+
+    .bottom-tab {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: row;
+        box-sizing: content-box;
+        margin: 0 auto;
+        width: 15rem;
+        height: (100rem / @basefont);
+        border-top: 1px solid #eee;
+        background: #fff;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+
+        a {
+            position: relative;
+            display: block;
+            width: (150rem / @basefont);
+            height: (100rem / @basefont);
+            background: #fff;
+
+            .icon {
+                display: block;
+                width: (48rem / @basefont);
+                height: (48rem / @basefont);
+                margin: (12rem / @basefont) (51rem / @basefont) 0;
+
+            }
+
+            .guess-icon {
+                display: none;
+            }
+
+            .index-icon {
+                display: block;
+            }
+
+            .guess {
+                display: none;
+                color: #000;
+                font-weight: 700;
+                font-size: (20rem / @basefont);
+                line-height: (32rem / @basefont);
+                text-align: center;
+            }
+
+            .index {
+                display: block;
+                color: #000;
+                font-weight: 700;
+                font-size: (20rem / @basefont);
+                line-height: (32rem / @basefont);
+                text-align: center;
+            }
+
+            span {
+                display: block;
+                font-size: 0.4rem;
+                line-height: 0.64rem;
+                color: #666;
+                text-align: center;
+            }
+        }
+    }
+
+    .Top {
+        position: fixed;
+        bottom: (185rem / @basefont);
+        right: (15rem / @basefont);
+        width: (100rem / @basefont);
+        height: (100rem / @basefont);
+        background: url(../images/top.png);
+        background-size: (100rem / @basefont) (100rem / @basefont);
+        border-radius: (80rem / @basefont);
+    }
+
+    .to-login {
+        position: fixed;
+        left: 50%;
+        bottom: (100rem / @basefont);
+        width: 15rem;
+        height: (90rem / @basefont);
+        margin-left: (-375rem / @basefont);
+
+        .gotologin {
+            .tologin {
+                width: 15rem;
+                height: (90rem / @basefont);
+            }
+        }
+    }
+}
